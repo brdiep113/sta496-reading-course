@@ -6,3 +6,13 @@ This course will concentrate on readings in the theory and practice of modelling
 ## Course Outline
 
 ## Marking Scheme
+- Learning Diary (20%)
+  - Date: Each week you will read relevant papers and books, engaging with them by writing notes and completing exercises. You will use GitHub to manage these notes and exercises and email a link to me at the end of each week.
+- Presentation I (20%)
+  - Date: Roughly end of Week 4 (exact date determined by lab presentation cycle - it’ll be the end of a month and you’ll have at least a month’s notice).
+  - Requirement: 10-15-minute presentation on what you’ve learned from Silge & Robinson.
+- Presentation II (20%)
+  - Date: Roughly end of Week 8, as above.
+  - Requirement: 10-15-minute presentation on an aspect of ethics, society, and NLP.
+- Final Project/paper (40%)
+  - Toward the mid-term break we will have a meeting to discuss the topic of your final project/paper. It will be due on the last day of the exam period. This will be marked by me and reviewed by another DoSS professor.
