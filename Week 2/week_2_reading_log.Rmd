@@ -1,0 +1,19 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+### Man is to Computer Programmer as Woman is to Homemaker? Debiasing Word Embeddings
+- ML techniques can embed bias directly into word-embeddings
+- For example, embeddings for certain occupations are closely linked to gender which reinforces prevailing stereotypes
+- We can calculate a so-called gender subspace vector for word-embeddings by finding the largest principle component that explains the variance between several pairs of words that vary only by gender (mother <-> father, boy <-> girl, she <-> he, etc. etc.)
+- Bias of a word embedding can be found by calculating its cosine similarity to the gender subspace vector
+- Debiasing algorithms for word embeddings are proposed
+  - Project words onto a gender subspace with axes corresponding to strength of bias in direction of male or female
+  - Neutralize
+    - ensure gender neutral words have 0 bias
+  - Equalize
+    - make sure all gender neutral word embeddings are equidistant to all elements in defined equality sets
+    - can be implemented as hard or soft debiasing depending on how much leeway we should give for inequalities between elements of equality sets
+- As we rely on ML models more, we should work to understand and debias these word embeddings as to prevent them from solidifying the bias that exists within our society
+
