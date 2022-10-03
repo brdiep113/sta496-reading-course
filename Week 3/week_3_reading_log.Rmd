@@ -1,0 +1,36 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+### Jurafsky et al, Chapter 3
+- language models are models that assign a probability to sequence or sequences of words
+- the simplest models assign probability to n-grams (sequences of n-words)
+- we basically take the probability of a word appearing given the previous words were whatever the n-gram length we care about is
+- a bit simplistic and use the Markov assumption that the probability of a word is conditioned only on n-words that appear before it
+- model complexity can be measured with perplexity (a weighted measure of how many branches for next word there are given a sequence)
+- sampling from a LM can give us new sentences
+- n-gram models are dependent on the train set, we can fail to assign probability to sentences that are feasible but just don't appear in our corpus
+
+
+### Release Strategies and the Social Impact of Language Models
+- Focused on the impact of the release of text generation model GPT-2
+- model was released in stages with progressively more complex models released so that potential for misuse could be gauged
+- this allows risk benefit analyses to be completed at each stage
+- Potential benefits for many fields such as code-autocompletion, grammar assistance, medical Q&A, chatbots, etc.
+- Potential for malicious actors to use it
+  - intentionally biasing the training data
+  - using GPT-2 in a malicious product (e.g. spam creation)
+  - on a larger scale, using GPT-2 to further political agendas (e.g. create propaganda)
+- security through obscurity is not a sufficient strategy to deal with misuse of models, we should be transparent and have a responsibility to monitor the use of language models
+- detecting synthetic text becomes more and more important based on this
+  - whether we train models to do so, or take a more human-centered approach, it still becomes a problem that the tools used to detect synthetic texts can be used to improve generation of synthetic text in an adversarial fashion
+  - metadata may become more important and platforms may want to track this information to detect language model generated text
+  - recommendations for model sharing in future AI work
+    - build frameworks to navigate the risk-benefit tradeoffs
+    - build infrastructure for distributed risk analysis
+      - allow for scalable agreements to allow people to access models for analysis
+      - balance security and free access
+      - fairness in AI research regardless of compute power
+    - build outreach with other AI organizations to coordinate research
+
