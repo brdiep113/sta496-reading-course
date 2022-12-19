@@ -1,0 +1,8 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+### My own paper!
+- I was pretty busy this week getting this publication ready so that it was accepted to a workshop for an oral presentation (Participatory AI for Mental Health at NeurIPS 2022). It was relevant to NLP so I will place it here in this repo.
+- We did work using speech as a biomarker for the diagnosis of depression and anxiety.
