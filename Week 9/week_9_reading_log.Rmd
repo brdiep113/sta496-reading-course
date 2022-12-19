@@ -1,0 +1,51 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+### Jurafsky et al, Chapter 10
+- machine translation is a task that involves translation of one language to another
+- this task has typically been done using encoder-decoder or sequence-to-sequence models that convert a sequence of words to another sequence
+- some key issues arise as languages display a lot of variation that makes it difficult to find a one-to-one sequence translation
+- word order typology is significant (SOV vs. SVO vs. OVS, etc. are all valid ways to display syntactic relations)
+- lexical divergences where some words do not map semantically exactly to their equivalents in another language
+- some languages simply have lexical gaps for concepts that cannot be translated
+- morphology is one of the most complex things to translate as sub-units of a word can communicate the same meaning as many words in other languages
+- some languages are more generous with the amount of information that can be omitted which may be impossible or difficult to recover in translation
+- encoder models encode the input to create a contextualized representation of it, while a decoder network takes that contextualized representation to generate an output
+- this task is typically done with RNNs which are able of modelling long sequences
+- training these models involves teacher forcing where we don't propogate erroneous predictions (although we use them to adjust weights) but just use our ground truth tokens when propagating the sequence of tokens
+- attention is useful in these models as they resolve a bottleneck issue where the last hidden state of a layer must represent the entire context, the attention mechanism allows the decoder to get information from all of the hidden states
+- this models the fact that different encoder states can be relevant to the decoder states with greater weight than other states
+- our models are basically predicting the most probably token at each stage, this can be done greedily looking only at the next token or potentially looking at possible outputs in future tokens
+- searching the potential outputs can be done using beam search where we explore some subset of possibilities
+- machine translation is also a task that transformers are good at
+- for practical usage they require us to think about tokenization schemes or parallel corpora to train on
+- backtranslation can be used to synthetically expand our datasets by re-translating text from a target language to the source language and using it as additional samples to train your source to target model
+- evaluating our models involves looking at both:
+  - adequacy: how well does translation capture the meaning of the source sentence
+  - fluency: how clear, natural, grammatical the translation is in the target
+- dealing with bias in translation, languages often have ambiguities (pronouns refer to the same gender, lack of pronouns for subjects) and when we translate to another language where these components are obligatory, our models often have to make a guess which could reflect bias
+- it's important that translations include measures of confidence in their predictions
+
+### Release Strategies and the Social Impact of Language Models
+- Focused on the impact of the release of text generation model GPT-2
+- model was released in stages with progressively more complex models released so that potential for misuse could be gauged
+- this allows risk benefit analyses to be completed at each stage
+- Potential benefits for many fields such as code-autocompletion, grammar assistance, medical Q&A, chatbots, etc.
+- Potential for malicious actors to use it
+  - intentionally biasing the training data
+  - using GPT-2 in a malicious product (e.g. spam creation)
+  - on a larger scale, using GPT-2 to further political agendas (e.g. create propaganda)
+- security through obscurity is not a sufficient strategy to deal with misuse of models, we should be transparent and have a responsibility to monitor the use of language models
+- detecting synthetic text becomes more and more important based on this
+  - whether we train models to do so, or take a more human-centered approach, it still becomes a problem that the tools used to detect synthetic texts can be used to improve generation of synthetic text in an adversarial fashion
+  - metadata may become more important and platforms may want to track this information to detect language model generated text
+  - recommendations for model sharing in future AI work
+    - build frameworks to navigate the risk-benefit tradeoffs
+    - build infrastructure for distributed risk analysis
+      - allow for scalable agreements to allow people to access models for analysis
+      - balance security and free access
+      - fairness in AI research regardless of compute power
+    - build outreach with other AI organizations to coordinate research
+

@@ -1,0 +1,14 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+### What I won't build
+- As computational linguists we need to proactively mitigate the harm that come about from our work
+- The creation of NLP tools relies on our labour so we should not just accept that these systems will be created to resolve ourselves of responsibility
+- Some applications of NLP such as surveillance technology or deceptive technology do not have reasonable use-cases that do not infringe upon people's rights so they should not be created at all
+- Social category detectors that can infer protected characteristics of individuals (race, class, location, gender, sexual orientation) without their voluntary consent are also pernicious
+- in particular, social category detectors can be very easily created due to the fact that all language usage is socially stratified
+- many demographic factors are linked to systematic variation in language at all levels of grammar
+- in these cases, bringing in linguistic expertise from sociolinguists can help us to avoid accidentally building social category detectors
+- we need to build a movement that empowers workers to refuse to work on unethical applications of NLP
