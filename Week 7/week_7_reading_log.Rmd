@@ -1,0 +1,24 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+### Compositional Semantics
+- the semantics or meaning of a phrase is made up of the parts of its syntactic constituents
+- this follows from the theory of formal semantics and the semantics-syntax interface
+- semantics has typically been measured as existing in some abstract-semantic space which is difficult to model
+- what we want to do is to map semantic space to a lower-dimensional space such that we can apply our mathematical models to it
+- this involves word-embedding vectors in matrix-vector space
+- binary composition involves finding composition functions that take two inputs and combining them to create a unique output that some how encodes the information from its arguments
+- we could do additive composition where we add these embedding vectors together which gets at the idea that the embedding generated from the sum of two vectors represents the two constituent embeddings together
+- we could also do multiplicative composition which is more complex but can include higher order interaction
+- beyond binary composition, the order in which we apply binary compositional functions is also meaningful, it is not right to just apply binary composition functions to word-embedding vectors in the order they appear from left-to-right
+- we can use models such as RNNs or CNNs that can apply our embeddings in more sophisticated ways with additional long-distance dependencies
+
+### Climbing towards NLU: On Meaning, Form, and Understanding in the Age of Data
+- large language models have been incredibly successful on a variety of NLP tasks, but there is significant debarte as to whether or not they understand anything about the language they generate/take as input
+- the idea that our language models actually comprehend anything is up for debate
+- one position is that the systems being trained only on the surface form of language have no way to actually learn meaning
+- language models do not have communicative intent 
+- our models may simply be very good at detecting statistical patterns and can merely reflect the communicative intents of those who created the data they are trained on, but they themselves have no intent
+- we may be biased to assume that our model's use of language constitutes communicative intent and filling in the gaps of deficiencies in the models we study
