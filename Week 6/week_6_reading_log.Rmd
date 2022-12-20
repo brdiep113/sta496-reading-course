@@ -1,0 +1,21 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+### Interpretability in NLP: Moving Beyond Vision
+- NLP models remain behind their peers in other fields such as computer vision, in terms of interpretability
+- Interpretability is not very well-defined but it generally involves a combination of model transparency and understanding what parts of the input contribute to the output of our models
+- We can build transparent models such that they accomplish the same tasks but with easily explainable behaviours
+  - Deep learning models have not tyically been interpretable
+  - But models like log-linear ones or ones with attention mechanisms have been proposed as having some interpretability
+- We can also build post-hoc measures
+  - With post-hoc models, we interpret with another model that takes our output as input and outputs a prediction about what input could've given this
+  - We could also do studies where we perturb the input and see how robust the model is to these changes
+- in language models this can mean perturbing the order or vocabulary in an input sentence and seeing if the model's outputs change as well
+- attention gives maximum transparence on how the model works but still can be hard to interpret
+- alignment models can be used to give good word alignments but are not related to translation models
+- saliency maps allow us to measure which parts of an input contribute msot to the activity of a specific layer in a network
+- looking at multiple saliency maps can help us narrow down how the model is making its decisions
+- saliency works with gradients which is helpful since they are generally model-agnostic and we take gradients anyways when doing backpropagation
+- much open work remains for interpretation of deep architectures beyond just NLP
